@@ -8,6 +8,11 @@ import App from './App';
 
 const store = configureStore();
 
+if(process.env.NODE_ENV !== "production"){
+  window.store = store
+}
+
+console.log(store.getState())
 function Root() {
   return (
     <Provider store={store}>
