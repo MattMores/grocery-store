@@ -6,11 +6,13 @@ import configureStore from './store';
 import { Dispatch } from 'react';
 import './index.css';
 import App from './App';
+import { populateProduce } from './store/produce';
 
 const store = configureStore();
 
 if(process.env.NODE_ENV !== "production"){
   window.store = store
+  window.populateProduce = populateProduce 
 }
 
 console.log(store.getState())
