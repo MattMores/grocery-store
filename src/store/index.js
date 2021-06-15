@@ -3,7 +3,7 @@ import produceReducer from "./produce";
 
 
 const rootReducer = combineReducers({
-  produce:produceReducer,
+  produce: produceReducer,
 
 })
 
